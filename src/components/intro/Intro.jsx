@@ -11,7 +11,7 @@ export default function Intro() {
             showCursor: true,
             backSpeed: 70,
             backDelay: 800,
-            strings: ["Web Developer", "Data Scientist"]
+            strings: ["Web Developer"]
         })
     }, [])
 

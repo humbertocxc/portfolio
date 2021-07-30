@@ -8,6 +8,10 @@
 
     h2{
         font-size: 50px;
+
+        @include mobile{
+            font-size: 20px;
+        }
     }
 
     ul{
@@ -16,17 +20,12 @@
         list-style: none;
         display: flex;
 
-        li{
-            font-size: 14px;
-            margin-right: 50px;
-            padding: 7px;
-            border-radius: 10px;
-            cursor: pointer;
-
-            &.active{
-                background-color: $mainColor;
-                color: white;
-            }
+        @include mobile{
+            background-color: #f0f0f0;
+            border-radius: 20px;
+            margin: 10px 0;
+            flex-wrap: wrap;
+            justify-content: center;
         }
     }
 
@@ -36,6 +35,10 @@
         align-items: center;
         justify-content: center;
         flex-wrap: wrap;
+
+        @include mobile{
+            width: 100%;
+        }
 
         .item{
             width: 200px;
@@ -49,6 +52,11 @@
             color: white;
             position: relative;
             transition: all .7 ease;
+
+            @include mobile{
+                width: 130px;
+                height: 100px;
+            }
 
             h3{
                 position: absolute;
