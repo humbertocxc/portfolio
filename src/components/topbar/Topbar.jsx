@@ -7,7 +7,7 @@ export default function Topbar({menuOpen, setMenuOpen}) {
             <div className="wrapper">
                 <div className="left">
                     <a href="#intro" className="logo">Humberto</a>
-                    <a href="https://github.com/humbertocxc" target="_blank" className="logo">
+                    <a href="https://github.com/humbertocxc" target="_blank" rel="noreferrer" className="logo">
                         <div className="itemContainer">
                             <GitHub className="icon"/>
                             <span>humbertocxc</span>
