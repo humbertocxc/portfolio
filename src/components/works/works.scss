@@ -1,7 +1,7 @@
 @import "../../global.scss";
 
 .works {
-  background-color: crimson;
+  background-color: $azul;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -75,11 +75,19 @@
             flex-direction: column;
             justify-content: space-between;
 
+            a{
+
+              span{
+                text-decoration: none;
+                color: black;
+              }
+            }
+
             .imgContainer {
-              width: 40px;
-              height: 40px;
+              width: 80px;
+              height: 80px;
               border-radius: 50%;
-              background-color: rgb(245, 179, 155);
+              background-color: $verde;
               display: flex;
               align-items: center;
               justify-content: center;
@@ -90,7 +98,7 @@
               }
 
               img {
-                width: 25px;
+                width: 60px;
 
                 @include mobile {
                   width: 15px;
