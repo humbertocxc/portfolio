@@ -1,41 +1,39 @@
 "use client"
-
 import Image from "next/image"
 import Link from "next/link"
-import { usePathname } from "next/navigation";
-import ThemeButton from "./ThemeButton";
+import { usePathname } from "next/navigation"
+import ThemeButton from "./ThemeButton"
 
 const routes = [
   { path: '/', name: 'home' },
-  { path: '/projects', name: 'projects' },
   { path: '/about', name: 'about' },
+  { path: '/projects', name: 'projects' },
 ]
 
 export default function Header() {
   const path = usePathname()
 
   return(
-    <header className="flex flex-column h-36 w-screen justify-between">
-      <div className="flex items-center justify-between px-20 w-screen">
+    <header className="w-screen justify-between">
+      <ThemeButton />
+      <div className="h-24 flex items-start justify-between px-20 w-screen">
         <div className="flex flex-column items-center gap-2">
-          <Image src="/pfp.jpeg" width={20} height={20} alt="" className="h-12 mx-auto object-cover rounded-full w-12" />
+          <Image src="/pfp.jpeg" width={200} height={200} alt="" className="h-12 mx-auto object-cover rounded-full w-12" />
           <h2 className="font-semibold text-sm">Humberto Gessinger</h2>
         </div>
 
         <div className="flex flex-column items-center gap-8">
-          {routes.map((item, id) => 
+          {routes.map((item) => 
             <Link
               href={item.path}
-              className={`py-2 ${item.path === path ? 'border-b-4 border-rose-500' : 'hover:border-b-4 hover:border-gray-700'}`}
-              key={id}
+              className={`easy-in-out py-2 ${item.path === path ? 'border-b-4 border-rose-500' : 'hover:border-b-4 hover:border-gray-700'}`}
+              key={item.path}
             >
-              <b>0{id + 1}</b> {item.name}
+              {item.name}
             </Link>
           )}
         </div>
       </div>
-
-      <ThemeButton />
     </header>
   )
 }
