@@ -1,5 +1,6 @@
 import { IProject } from "@/app/types";
 import Image from "next/image";
+import Link from "next/link";
 
 interface ICard {
   project: IProject;
@@ -8,11 +9,12 @@ interface ICard {
 export default function Card({ project }: ICard) {
   return (
     <div className="h-96 flex items-center justify-center">
-      <button
+      <Link
+        href={`/projects/${project.slug}`}
         className="relative transition-all ease-in-out rounded-lg overflow-hidden w-full h-80 mx-2
         bg-black shadow-lg opacity-80 hover:opacity-60 hover:h-81 hover:mx-0 last:pr-0"
       >
-        <Image width={1000} height={1000} src={project.image} alt="" className="w-full h-full object-cover absolute top-0 left-0" />
+        <Image width={1000} height={1000} src={project.images[0]} alt="" className="w-full h-full object-cover absolute top-0 left-0" />
         <div className="p-4 bg-opacity-90 relative">
           <span>{project.name}</span>
           <div className="hidden hover:flex">
@@ -21,7 +23,7 @@ export default function Card({ project }: ICard) {
             </span>
           </div>
         </div>
-      </button>
+      </Link>
     </div>
   )
 }
