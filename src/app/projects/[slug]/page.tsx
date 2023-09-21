@@ -27,15 +27,15 @@ export default function Page({ params }: { params: { slug: string } }) {
       </p>
       <p>{project?.description}</p>
       <p className="pt-16 pb-6">Here are some images of the "{project.name}" project.</p>
-      <div className="pb-20 grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 xs:grid-cols-1 gap-12 w-full container items-center">
+      <div className="pb-20 grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 xs:grid-cols-1 gap-8">
         {project?.images.map((img) => (
-          <div className="h-81 flex items-center justify-center">
+          <div className="flex items-center justify-center h-81 overflow-hidden rounded-lg isolate">
             <Image
               src={img || ""}
               width={100}
               height={100}
               alt=""
-              className="w-11/12 h-11/12 mx-auto bg-auto  rounded-lg shadow-lg opacity-90 hover:opacity-100 last:pr-0 hover:w-full"
+              className="h-80 w-auto mx-auto rounded-lg shadow-lg opacity-90 hover:opacity-100 last:pr-0 hover:h-81"
             />
           </div>
         ))}

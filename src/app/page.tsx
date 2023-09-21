@@ -9,9 +9,8 @@ export default function Home() {
   return (
     <div className="relative group pt-24 inset-y-full">
       <div className="transform duration-500 inset-y-3/4 group-hover:-inset-y-0">
-        <title>Humberto Gessinger | Portfolio</title>
         <h4 className="text-pink-600 font-bold">HELLO, MY NAME IS HUMBERTO AND I'M A</h4>
-        <h1 className="font-semibold text-7xl my-5">Full Stack Developer.</h1>
+        <h1 className="font-semibold text-5xl sm:text-7xl my-5">Full Stack Developer.</h1>
         <h3 className="text-2xl mt-10">
           I'm a programmer since 2018, and in early 2021, I began my carreer as a web developer. My passion for this field has continuously expanded and it is now my primary focus.
         </h3>

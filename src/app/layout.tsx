@@ -19,11 +19,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <title>Humberto Gessinger</title>
       <body className={inter.className}>
         <Provider>
           <main className='overflow-x-hidden h-screen'>
             <Header />
-            <div className='px-20'>
+            <div className='px-8 sm:px-20'>
               {children}
             </div>
             <Footer />

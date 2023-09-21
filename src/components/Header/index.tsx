@@ -12,11 +12,12 @@ export default function Header() {
   return(
     <header className="pr-4">
       <ThemeButton />
-      <div className="h-24 flex items-start justify-between px-20 w-screen">
-        <div className="flex flex-column items-center gap-2 font-semibold">
+      <div className="h-24 flex flex-col sm:flex-row items-start justify-between px-8 sm:px-20 w-screen">
+        <div className="flex flex-column items-center m-auto mb-3 sm:m-0 gap-2 font-semibold">
           <Link href="/" className="flex flex-column items-center gap-2 hover:font-bold">
             <Image src="/pfp.jpeg" width={200} height={200} alt="" className="h-12 mx-auto object-cover rounded-full w-12" />
-            <h2 className="text-sm">Humberto Gessinger</h2>
+            <h2 className="text-sm hidden md:inline">Humberto Gessinger</h2>
+            <h2 className="text-sm inline md:hidden">HG</h2>
           </Link>
           <Link href={githubLink} target="_blank">
             <Github size={20} />
@@ -26,7 +27,7 @@ export default function Header() {
           </Link>
         </div>
 
-        <div className="flex flex-column items-center gap-8">
+        <div className="flex flex-column items-center m-auto sm:m-0 gap-8">
           {routes.map((item) => 
             <Link
               href={item.path}

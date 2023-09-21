@@ -4,6 +4,7 @@ import { contactEmail, githubLink, linkedinLink } from "../constants"
 export default function Page() {
   return (
     <div className="relative group pt-24 inset-y-full">
+      <title>Humberto | About</title>
       <div className="flex flex-col pb-12 gap-2">
         <h2 className="text-pink-500 font-bold pb-4">ABOUT ME</h2>
         <p>Hello, I'm Humberto Gessinger do Nascimento Mendonca, a passionate fullstack developer with a strong commitment to creating exceptional web experiences.</p>
@@ -14,7 +15,7 @@ export default function Page() {
       <div className="flex flex-col pb-12 gap-2">
         <h2 className="text-pink-500 font-bold pb-4">CONTACT</h2>
         <p>If you'd like to get in touch with me, you can find me at the following contact points:</p>
-        <ul className="px-12 list-disc">
+        <ul className="px-2 sm:px-12 list-disc">
           <li>
             <span>Linkedin: </span>
             <Link target="_blank" className="font-semibold text-pink-500" href={linkedinLink}>{linkedinLink}</Link>
