@@ -3,23 +3,27 @@ import Image from "next/image"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import ThemeButton from "./ThemeButton"
-
-const routes = [
-  { path: '/', name: 'home' },
-  { path: '/about', name: 'about' },
-  { path: '/projects', name: 'projects' },
-]
+import { Github, Linkedin } from "lucide-react"
+import { githubLink, linkedinLink, routes } from "@/app/constants"
 
 export default function Header() {
   const path = usePathname()
 
   return(
-    <header className="w-screen justify-between">
+    <header className="pr-4">
       <ThemeButton />
       <div className="h-24 flex items-start justify-between px-20 w-screen">
-        <div className="flex flex-column items-center gap-2">
-          <Image src="/pfp.jpeg" width={200} height={200} alt="" className="h-12 mx-auto object-cover rounded-full w-12" />
-          <h2 className="font-semibold text-sm">Humberto Gessinger</h2>
+        <div className="flex flex-column items-center gap-2 font-semibold">
+          <Link href="/" className="flex flex-column items-center gap-2 hover:font-bold">
+            <Image src="/pfp.jpeg" width={200} height={200} alt="" className="h-12 mx-auto object-cover rounded-full w-12" />
+            <h2 className="text-sm">Humberto Gessinger</h2>
+          </Link>
+          <Link href={githubLink} target="_blank">
+            <Github size={20} />
+          </Link>
+          <Link href={linkedinLink} target="_blank">
+            <Linkedin size={20} />
+          </Link>
         </div>
 
         <div className="flex flex-column items-center gap-8">
