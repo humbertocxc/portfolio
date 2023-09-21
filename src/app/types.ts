@@ -1,6 +1,6 @@
 export interface IProject {
-  id: number;
-  image: string;
+  slug: string;
+  images: string[];
   resume: string;
   name: string;
   link?: string;
