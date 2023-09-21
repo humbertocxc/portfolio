@@ -1,4 +1,4 @@
-export default function Notes() {
+export default function Page() {
   return (
     <div>
       Notes

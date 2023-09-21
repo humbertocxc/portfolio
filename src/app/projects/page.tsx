@@ -1,7 +1,7 @@
 import ProjectsList from "@/components/Projects"
 import { projects } from "../constants"
 
-export default function Projects() {
+export default function Page() {
   return (
     <div>
       <h2 className="pt-24 text-pink-500 font-semibold">MY PROJECTS</h2>
