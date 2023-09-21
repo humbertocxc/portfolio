@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import Provider from './providers'
 import Header from '@/components/Header'
+import Footer from '@/components/Footer'
 import './globals.css'
 
 const inter = Inter({ subsets: ['latin'] })
@@ -20,10 +21,13 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <Provider>
-          <Header />
-          <div className="px-20">
-            {children}
-          </div>
+          <main className='overflow-x-hidden h-screen'>
+            <Header />
+            <div className='px-20'>
+              {children}
+            </div>
+            <Footer />
+          </main>
         </Provider>
       </body>
     </html>
