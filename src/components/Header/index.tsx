@@ -7,7 +7,7 @@ import { Github, Linkedin } from "lucide-react"
 import { githubLink, linkedinLink, routes } from "@/app/constants"
 
 export default function Header() {
-  const path = usePathname()
+  const path = usePathname().split('/')[1]
 
   return(
     <header className="pr-4">
@@ -30,7 +30,7 @@ export default function Header() {
           {routes.map((item) => 
             <Link
               href={item.path}
-              className={`easy-in-out py-2 ${item.path === path ? 'border-b-4 border-rose-500' : 'hover:border-b-4 hover:border-gray-700'}`}
+              className={`easy-in-out py-2 ${item.path === `/${path}` ? 'border-b-4 border-rose-500' : 'hover:border-b-4 hover:border-gray-700'}`}
               key={item.path}
             >
               {item.name}
