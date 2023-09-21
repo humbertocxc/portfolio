@@ -1,5 +1,5 @@
-import Card from "../Card";
-import { IProject } from "@/app/types";
+import Card from "../Card"
+import { IProject } from "@/app/types"
 
 interface IProjectsList {
   projects: IProject[];

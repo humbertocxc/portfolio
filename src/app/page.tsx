@@ -1,7 +1,7 @@
-import { projects } from "./constants";
-import Link from "next/link";
-import { ArrowRight } from "lucide-react";
-import ProjectsList from "@/components/Projects";
+import { projects } from "./constants"
+import Link from "next/link"
+import { ArrowRight } from "lucide-react"
+import ProjectsList from "@/components/Projects"
 
 export default function Home() {
   const latestProjects = projects.slice(0, 8)

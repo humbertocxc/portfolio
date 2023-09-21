@@ -1,5 +1,5 @@
-import { githubLink, linkedinLink } from "@/app/constants";
-import FooterItem from "./FooterItem";
+import { contactEmail, githubLink, linkedinLink } from "@/app/constants"
+import FooterItem from "./FooterItem"
 
 export default function Footer() {
   return (
@@ -10,7 +10,7 @@ export default function Footer() {
         <FooterItem title="© 2023" description="Humberto G." link="/" />
         <FooterItem title="Github" description="humbertocxc" link={githubLink} />
         <FooterItem title="Linkedin" description="Humberto Mendonca" link={linkedinLink} />
-        <FooterItem title="E-mail" description="humberto.gnm98@gmail.com" link="/" />
+        <FooterItem title="E-mail" description={contactEmail} link={'mailto:'+contactEmail} />
       </div>
     </footer>
   )

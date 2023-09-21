@@ -2,6 +2,7 @@ import { IProject } from "./types"
 
 export const githubLink = "https://github.com/humbertocxc"
 export const linkedinLink = "https://www.linkedin.com/in/humberto-mendonca-080317172"
+export const contactEmail = "gnm.humberto@gmail.com"
 
 export const routes = [
   { path: '/', name: 'home' },

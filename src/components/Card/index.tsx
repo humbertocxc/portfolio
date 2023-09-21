@@ -1,6 +1,6 @@
-import { IProject } from "@/app/types";
-import Image from "next/image";
-import Link from "next/link";
+import { IProject } from "@/app/types"
+import Image from "next/image"
+import Link from "next/link"
 
 interface ICard {
   project: IProject;
