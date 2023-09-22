@@ -17,7 +17,6 @@ export default function Header() {
           <Link href="/" className="flex flex-column items-center gap-2 hover:font-bold">
             <Image src="/pfp.jpeg" width={200} height={200} alt="" className="h-12 mx-auto object-cover rounded-full w-12" />
             <h2 className="text-sm hidden md:inline">Humberto Gessinger</h2>
-            <h2 className="text-sm inline md:hidden">HG</h2>
           </Link>
           <Link href={githubLink} target="_blank">
             <Github size={20} />
